@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(58, 170, 240);
+}
+
+header h1, header h2 {
+    color: white;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 30px 10px 30px 124px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav li a {
+    color: white;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+main ul li {
+    margin: 0 10px 10px 0;
+    padding: 2rem;
+}
+footer {
+    padding: 3rem;
+}

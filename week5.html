@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+    <meta name="description" content="This is my week 5 notes">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Aston Cook</h1>
+    <h2>WDD 330</h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" title="Home">Home</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <main>
+        <h1>Week 5 Notes</h1>
+        <ul>
+          <li>There are 3 different types of errors. System error, Programmer error, and User error.</li>
+          <li>We can get refrence errors from small mistakes like not defineing a function. Here is some code to show this:</li>
+        </ul>
+        <hr>
+        <p>unicorn();</p>
+        <p><< ReferenceError: unicorn is not defined</p>
+        <hr>
+        <ul>
+            <li>Here it shows that we need to define our function 'unicorn' in this case.</li>
+            <li>It is important to test and ebug because just one small mistake can disable a webiste or an important page of a website.</li>
+            <li>There is a built in protector for this called 'strict mode'. It can help us keep our code clean and with no errors</li>
+            <li>We would implement it like this:</li>
+        </ul>
+        <hr>
+        <p>'use strict'</p>
+        <hr>
+        <ul>
+            <li>Doing that will help us have another layer of protection with our code.</li>
+            <li>We can make new exceptions for code that might have a unique option.</li>
+            <li>We would do it like this:</li>
+        </ul>
+        <hr>
+        <p>throw 2;</p>
+        <p>throw 'Up';</p>
+        <p>throw { toys: 'out of pram' };</p>
+        <hr>
+        <ul>
+            <li>This helps us create and test our code for futher use and it can help us in the future for refrence.</li>
+            <li>We can test out code using jest functions by stating the method we want to test and the functions that corespond with it.</li>
+            <li>Here is an example:</li>
+        </ul>
+        <hr>
+        <p>function squareRoot(number) {</p>
+        <p>'use strict';</p>
+        <p> if (number < 0) {</p>
+        <p>throw new RangeError("You can't find the square root of negative numbers")</p>
+        <p>}</p>
+        <p>return Math.sqrt(number);</p>
+        <p>};</p>
+        <p></p>
+        <p>test('square root of 4 is 2', () => {</p>
+        <p>expect(squareRoot(4)).toBe(2);</p>
+        <p>});</p>
+    </main>
+</body>
+<footer></footer>
+</html>
