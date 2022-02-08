@@ -27,12 +27,12 @@ const links = [{
     url: 'week4-team.html',
   },
   {
-    label: 'Week 5 Team Activity',
-    url: 'week5-team.html',
-  },
-  {
     label: 'Week 5 Notes',
     url: 'week5.html',
+  },
+  {
+    label: 'Week 5 Team Activity',
+    url: 'week5-team.html',
   },
   {
     label: 'To Do List',
