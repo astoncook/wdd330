@@ -23,12 +23,20 @@ const links = [{
     url: 'week4.html',
   },
   {
+    label: 'Week 4 Team Activity',
+    url: 'week4-team.html',
+  },
+  {
     label: 'Week 5 Team Activity',
     url: 'week5-team.html',
   },
   {
     label: 'Week 5 Notes',
     url: 'week5.html',
+  },
+  {
+    label: 'To Do List',
+    url: 'todo.html',
   }
 ];
 
@@ -86,3 +94,30 @@ function add() {
     outputElement.innerHTML = 'Total: ' + total;
   }
 }
+
+// Week 4 Team Activity
+      const divBoard = document.querySelector('.divBoard');
+      const resetButton = document.getElementById('reset');
+      const player1 = 'X';
+      const player2 = 'O';
+      let player = player1;
+      function addPiece(e) {
+        console.log(e.target);
+        e.target.innerHTML = player;
+        if (player === player1) player = player2;
+        else player = player1;
+      }
+      // div version
+      function resetBoardDiv() {
+        const divBoard = document.querySelector('.divBoard');
+        for (let i = 0; i < divBoard.children.length; i++) {
+          divBoard.children[i].innerText = '';
+        }
+        const children = Array.from(divBoard.children);
+        const empty = children.filter(function(child) {
+          return child.innerText == 'X' || child.innerText == 'O';
+        });
+        console.log(empty);
+      }
+      divBoard.addEventListener('click', addPiece);
+      reset.addEventListener('click', resetBoardDiv);
