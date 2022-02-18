@@ -37,6 +37,13 @@ const links = [{
   {
     label: 'To Do List',
     url: 'todo.html',
+  },
+  {
+    label: 'Week 7 Notes',
+    url: 'week7.html',
+  },{
+    label: 'Week 7 Team Activity',
+    url: 'week7-team.html',
   }
 ];
 
