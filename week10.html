@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10</title>
+    <meta name="description" content="This is my week 10 notes" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Aston Cook</h1>
+      <h2>WDD 330</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" title="Home">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Week 10 Notes</h1>
+      <ul>
+        <li>
+          Validation is a very important thing in websites. It can keep us
+          organized and not confused.
+        </li>
+        <li>
+          One of the simplest forms of validation is when entering a password
+          and a comment might come up that says the criteria that is required for
+          the password.
+        </li>
+        <li>
+          This is called client-side validation and is very important for us to use
+          regularly to keep users from being confused.
+        </li>
+        <li>Here is an example of client-side validation:</li>
+      </ul>
+      <hr />
+      <p><form></p>
+      <p><label for="choose">Would you prefer a banana or cherry? (required)</label></p>
+      <p><input id="choose" name="i_like" required></p>
+      <p><button>Submit</button></p>
+      <p></form></p>
+      <hr>
+      <ul>
+          <li>This example uses the "required" attribute.</li>
+          <li>Using this attribute will force the user to enter in something to submit.</li>
+          <li>This is very helpful when a user is making a profile or logging in to their account.</li>
+          <li>Being able to fetch API's is very important too.</li>
+          <li>This allows us to be able to manipulate parts of the HTTP pipeline and it can also fetch resources across networks.</li>
+          <li>Here is an example of the fetch attribute being used:</li>
+      </ul>
+      <hr>
+      <p>fetch('http://example.com/movies.json')</p>
+      <p>.then(response => response.json())</p>
+      <p>.then(data => console.log(data));</p>
+      <hr>
+      <ul>
+          <li>This example above fetches a file across the network and prints it onto the console.</li>
+          <li>This can help with staying organized and saving time when needing to import data.</li>
+          <li>We can use things called response objects. They allow us to display status codes and see if the website is working</li>
+      </ul>
+    </main>
+  </body>
+  <footer></footer>
+</html>
