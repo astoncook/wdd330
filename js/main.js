@@ -41,46 +41,49 @@ const links = [{
   {
     label: 'Week 7 Notes',
     url: 'week7.html',
-  },{
+  }, {
     label: 'Week 7 Team Activity',
     url: 'week7-team.html',
   },
   {
     label: 'Week 8 Notes',
     url: 'week8.html',
-  },{
+  }, {
     label: 'Week 8 Team Activity',
     url: 'week8-team.html',
   },
   {
     label: 'Week 9 Notes',
     url: 'week9.html',
-  },{
+  }, {
     label: 'Week 9 Team Activity',
     url: 'week9-team.html',
   },
   {
     label: 'Week 10 Notes',
     url: 'week9.html',
-  },{
+  }, {
     label: 'Week 10 Team Activity',
     url: 'week10-team.html',
+  }, {
+    label: 'Week 11 Team Activity',
+    url: 'week11-team.html',
   }
 ];
 
 // Create a new list item for each link
-const ol = document.getElementById('assignments'); 
+const ol = document.getElementById('assignments');
 
 // Loop through the links array
 links.forEach(link => {
   let li = document.createElement('li');
   let a = document.createElement('a');
-  
-// Set the text of the anchor tag to the label of the link
+
+  // Set the text of the anchor tag to the label of the link
   a.setAttribute('href', link.url);
   a.innerText = link.label;
 
-// Append the anchor tag to the li 
+  // Append the anchor tag to the li 
   li.appendChild(a);
   ol.appendChild(li);
 
@@ -124,28 +127,29 @@ function add() {
 }
 
 // Week 4 Team Activity
-      const divBoard = document.querySelector('.divBoard');
-      const resetButton = document.getElementById('reset');
-      const player1 = 'X';
-      const player2 = 'O';
-      let player = player1;
-      function addPiece(e) {
-        console.log(e.target);
-        e.target.innerHTML = player;
-        if (player === player1) player = player2;
-        else player = player1;
-      }
-      // div version
-      function resetBoardDiv() {
-        const divBoard = document.querySelector('.divBoard');
-        for (let i = 0; i < divBoard.children.length; i++) {
-          divBoard.children[i].innerText = '';
-        }
-        const children = Array.from(divBoard.children);
-        const empty = children.filter(function(child) {
-          return child.innerText == 'X' || child.innerText == 'O';
-        });
-        console.log(empty);
-      }
-      divBoard.addEventListener('click', addPiece);
-      reset.addEventListener('click', resetBoardDiv);
+const divBoard = document.querySelector('.divBoard');
+const resetButton = document.getElementById('reset');
+const player1 = 'X';
+const player2 = 'O';
+let player = player1;
+
+function addPiece(e) {
+  console.log(e.target);
+  e.target.innerHTML = player;
+  if (player === player1) player = player2;
+  else player = player1;
+}
+// div version
+function resetBoardDiv() {
+  const divBoard = document.querySelector('.divBoard');
+  for (let i = 0; i < divBoard.children.length; i++) {
+    divBoard.children[i].innerText = '';
+  }
+  const children = Array.from(divBoard.children);
+  const empty = children.filter(function (child) {
+    return child.innerText == 'X' || child.innerText == 'O';
+  });
+  console.log(empty);
+}
+divBoard.addEventListener('click', addPiece);
+reset.addEventListener('click', resetBoardDiv);
