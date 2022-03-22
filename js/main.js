@@ -68,6 +68,10 @@ const links = [{
   }, {
     label: 'Week 11 Team Activity',
     url: 'week11-team.html',
+  },
+  {
+    label: 'Block 2 Project',
+    url: 'block2.html',
   }
 ];
 
