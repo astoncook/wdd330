@@ -1,5 +1,5 @@
-// Openweathermap API. Do not share it publicly.
-const api = '44f9450f5b8d83a76ccbb5adb4d479ce'; //Replace with your API
+// Openweathermap API and part of js example from them
+const api = '44f9450f5b8d83a76ccbb5adb4d479ce';
 
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
@@ -12,10 +12,9 @@ const sunsetDOM = document.querySelector('.sunset');
 window.addEventListener('load', () => {
   let long;
   let lat;
-  // Accesing Geolocation of User
+  // Accessing Geolocation of User
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
-      // Storing Longitude and Latitude in variables
       long = position.coords.longitude;
       lat = position.coords.latitude;
       const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api}&units=metric`;

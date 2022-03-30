@@ -13,6 +13,10 @@ body {
     -moz-border-radius: 20px;
 }
 
+#calculator {
+    padding: 1rem;
+}
+
 .title {
     background: #669FA8;
     color: white;
@@ -37,38 +41,42 @@ input {
     padding-left: 20px;
 }
 
-#billamt {
+#total {
     font-size: 14px;
-    /*color: #2980b9;*/
-    color: #669FA8;
+    color: black;
     background-color: #f7f7f7;
     width: 60%;
     padding: 5px 5px 8px 8px;
+    margin: 1rem;
 }
 
-#billamt:focus {
+#tipPerc {
+    margin: 1rem;
+}
+
+#total:focus {
     background: #fff;
-    border: 3px solid #2980b9;
+    border: 3px solid #669FA8;
     outline: none;
 }
 
-#peopleamt {
+#people {
     width: 60%;
     padding: 5px 5px 8px 8px;
-    margin-left: 20px;
-    color: #669FA8;
+    margin: 1rem;
+    color: black;
     background-color: #f7f7f7;
     font-size: 14px;
+}
+
+#people:focus {
+    background: #fff;
+    border: 3px solid #669FA8;
+    outline: none;
 }
 
 .dollarSign {
     display: inline;
-}
-
-#serviceQual {
-    padding: 13px 13px 20px 20px;
-    margin-left: 20px;
-    font-size: 25px;
 }
 
 button {

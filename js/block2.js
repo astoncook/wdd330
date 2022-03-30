@@ -1,39 +1,34 @@
-//Calculate Tip
+//define the variables put in
 function calculateTip() {
-    var billAmt = document.getElementById("billamt").value;
-    var serviceQual = document.getElementById("serviceQual").value;
-    var numOfPeople = document.getElementById("peopleamt").value;
+    var total = document.getElementById("total").value;
+    var tipPerc = document.getElementById("tipPerc").value;
+    var people = document.getElementById("people").value;
 
-    //validate input
-    if (billAmt === "" || serviceQual == 0) {
+    //check the input
+    if (total === "" || tipPerc == 0) {
         alert("Please enter values");
         return;
     }
-    //Check to see if this input is empty or less than or equal to 1
-    if (numOfPeople === "" || numOfPeople <= 1) {
-        numOfPeople = 1;
+    //check to see if people is at least one
+    if (people === "" || people <= 1) {
+        people = 1;
         document.getElementById("each").style.display = "none";
     } else {
         document.getElementById("each").style.display = "block";
     }
 
-    //Calculate tip
-    var total = (billAmt * serviceQual) / numOfPeople;
-    //round to two decimal places
+    //calculate the tip
+    var total = (total * tipPerc) / people;
     total = Math.round(total * 100) / 100;
-    //next line allows us to always have two digits after decimal point
+    //make sure the total is only 2 decimals
     total = total.toFixed(2);
-    //Display the tip
+    //show the tip using the variables
     document.getElementById("totalTip").style.display = "block";
     document.getElementById("tip").innerHTML = total;
 
 }
 
-//Hide the tip amount on load
-document.getElementById("totalTip").style.display = "none";
-document.getElementById("each").style.display = "none";
-
-//click to call function
+//calculate the tip when pushed
 document.getElementById("calculate").onclick = function () {
     calculateTip();
 
