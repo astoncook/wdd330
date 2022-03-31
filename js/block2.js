@@ -16,20 +16,17 @@ function calculateTip() {
     } else {
         document.getElementById("each").style.display = "block";
     }
-
     //calculate the tip
     var total = (total * tipPerc) / people;
     total = Math.round(total * 100) / 100;
     //make sure the total is only 2 decimals
     total = total.toFixed(2);
     //show the tip using the variables
-    document.getElementById("totalTip").style.display = "block";
+    document.getElementById("Tip").style.display = "block";
     document.getElementById("tip").innerHTML = total;
-
 }
 
 //calculate the tip when pushed
 document.getElementById("calculate").onclick = function () {
     calculateTip();
-
 };
